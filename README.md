@@ -34,4 +34,4 @@ An executive-level Power BI solution designed to track top-line revenue, net pro
 ## 📁 Repository Deliverables
 - `power_bi_task_4.pbix` - Interactive Power BI Report File
 - `Executive_Business_Report.pdf` - Complete Written Executive Insight Report
--
+- `DAX Measures` - DAX formulas created during the project
