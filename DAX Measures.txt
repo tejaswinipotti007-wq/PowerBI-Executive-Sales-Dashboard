@@ -1,0 +1,32 @@
+// 1. Total Sales
+Total Sales = SUM(Orders[sales])
+
+// 2. Total Profit
+Total Profit = SUM(Orders[profit])
+
+// 3. Profit Margin
+Profit Margin = DIVIDE([Total Profit], [Total Sales])
+
+// 4. Total Orders
+Total Orders = COUNTROWS(Orders)
+
+// 5. Previous Month Sales
+Previous Month Sales = 
+CALCULATE(
+    [Total Sales],
+    PREVIOUSMONTH(Calendar[Date])
+)
+
+// 6. Growth %
+Growth % = 
+DIVIDE(
+    [Total Sales] - [Previous Month Sales],
+    [Previous Month Sales]
+)
+
+// 7. Category Contribution %
+Category Contribution % = 
+DIVIDE(
+    [Total Sales],
+    CALCULATE([Total Sales], ALL(products[category]))
+)
